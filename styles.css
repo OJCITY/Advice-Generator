@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* import the font weight */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Open+Sans:ital,wght@0,400;1,300&display=swap");
+
+/* variables */
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font: size 20px;
+  background-color: var(--grayish-blue);
+  padding: 1.3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 0.15px);
+}
+
+blockquote {
+  font-size: 28px;
+  line-height: 2;
+}
+.container {
+  background-color: var(--dark-grayish-blue);
+  padding: 1.25rem 1.25rem 2rem;
+  border-radius: 2rem;
+  position: relative;
+  max-width: 450px;
+}
+
+.container h1 {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem; /* 1 rem equals 16pixels */
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.container blockquote {
+  color: var(--light-cyan);
+  margin-bottom: 3rem;
+}
+
+.container img {
+  margin-bottom: 1rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.container button {
+  background-color: var(--neon-green);
+  padding: 1.25rem;
+  border: none;
+  border-radius: 90%;
+  transition: background-color 0.3s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.container .equalbutton {
+  padding: 20px 25px 5px 25px;
+}
+
+.container button:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.75rem hsl(150, 100%, 64%));
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5rem;
+  color: var(--light-cyan);
+}
+.attribution a {
+  color: hsl(229, 95%, 48%);
+  transition: color 0.5s ease-in-out;
+}
+
+.attribution a:hover {
+  color: hsl(229, 48%, 38%);
+}
+
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .container {
+    width: 350px;
+    padding: 25px;
+  }
+
+  .container button:hover {
+    background-color: var(--neon-green);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
